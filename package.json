@@ -22,5 +22,16 @@
   },
   "peerDependencies": {
     "i18next": "^25.7.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
   }
 }
