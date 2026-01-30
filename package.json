@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "@apiglot/i18next",
+  "version": "0.0.1",
+  "description": "Apiglot primitives for i18next integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "Apiglot Team",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.0",
+  "dependencies": {
+    "i18next-resources-to-backend": "^1.2.1"
+  },
+  "devDependencies": {
+    "i18next": "^25.7.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "i18next": "^25.7.4"
+  }
+}
