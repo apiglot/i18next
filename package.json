@@ -1,8 +1,19 @@
 {
-  "type": "module",
   "name": "@apiglot/i18next",
   "version": "0.0.1",
   "description": "Apiglot primitives for i18next integration",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiglot/i18next"
+  },
+  "homepage": "https://github.com/apiglot/i18next#readme",
+  "bugs": {
+    "url": "https://github.com/apiglot/i18next/issues"
+  },
+  "authors": [
+    "Apiglot Team"
+  ],
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
