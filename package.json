@@ -1,6 +1,6 @@
 {
   "name": "@apiglot/i18next",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Apiglot primitives for i18next integration",
   "repository": {
     "type": "git",
