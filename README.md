@@ -30,15 +30,11 @@ Common usage pattern: create the backend with your project options and register 
 ESM / modern JS:
 ```js
 import i18next from 'i18next';
-import createApiglotBackend from '@apiglot/i18next';
+import { createI18nextBackend } from '@apiglot/i18next';
 
-const ApiglotBackend = createApiglotBackend({
+const ApiglotBackend = createI18nextBackend({
     projectId: 'my-project-id',
-    apiKey: process.env.APIGLOT_API_KEY, // or a public key if intended for browser
-    baseUrl: 'https://api.apiglot.com',  // optional, defaults to Apiglot API
-    /* optional:
-         headers, cache, fetchOptions, debug
-    */
+    apiKey: process.env.APIGLOT_API_KEY,
 });
 
 i18next
@@ -49,41 +45,6 @@ i18next
         // other i18next options
     });
 ```
-
-CommonJS:
-```js
-const i18next = require('i18next');
-const createApiglotBackend = require('@apiglot/i18next');
-
-const ApiglotBackend = createApiglotBackend({ projectId: 'my-project-id', apiKey: process.env.APIGLOT_API_KEY });
-
-i18next.use(ApiglotBackend).init({ lng: 'en', fallbackLng: 'en' });
-```
-
-TypeScript:
-```ts
-import i18next from 'i18next';
-import createApiglotBackend from '@apiglot/i18next';
-
-const ApiglotBackend = createApiglotBackend({
-    projectId: 'my-project-id',
-    apiKey: process.env.APIGLOT_API_KEY,
-});
-
-await i18next.use(ApiglotBackend).init({ lng: 'en' });
-```
-
-## Configuration options
-
-Typical options passed into the factory:
-- `projectId` (string) — required, identifies the Apiglot project
-- `apiKey` (string) — optional, token used to authenticate requests
-- `baseUrl` (string) — optional, override the default Apiglot API URL
-- `headers` (object) — optional, custom headers for requests
-- `cache` (object|boolean) — optional, local caching settings
-- `debug` (boolean) — optional, enable debug logging
-
-The returned backend is i18next-compatible and can accept additional runtime backend options via i18next `backend` config when calling `init`.
 
 ## Contributing
 
